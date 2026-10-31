@@ -42,12 +42,15 @@ def detect_and_measure_shapes(image_path):
         
         cv2.drawContours(img, [approx], 0, (0, 255, 0), 3)
 
-        label = f"{shape_type} (A:{int(area)} P:{int(perimeter)})"
-        cv2.putText(img, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        label1 = f"{shape_type} (A:{int(area)} P:{int(perimeter)})"
+        label2 = f"Box Dim: {w}x{h}"
+        
+        cv2.putText(img, label1, (x, y - 25), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
+        cv2.putText(img, label2, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 2)
 
     cv2.imshow("Shape Detection", img)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    detect_and_measure_shapes('hexagon.jpg')
+    detect_and_measure_shapes('sample_image.jpg')
