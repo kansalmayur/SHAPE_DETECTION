@@ -1,0 +1,2 @@
+Reading image file: hexagon.jpg
+Detected: hexagon | Area: 119657.0 | Perimeter: 1346.0 | Box: W:373 H:426
