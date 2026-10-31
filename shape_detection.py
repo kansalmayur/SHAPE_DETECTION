@@ -53,4 +53,4 @@ def detect_and_measure_shapes(image_path):
     cv2.destroyAllWindows()
 
 if __name__ == "__main__":
-    detect_and_measure_shapes('hexagon.jpg')
+    detect_and_measure_shapes('shape.jpg')
